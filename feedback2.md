@@ -8,6 +8,7 @@ Il semblerait qu'il n'y ai pas de gestion de l'utilisateur connecté, le menu en
 ## Structure du projet / code
   
 CoreController : pourquoi faire un "global \\$router" dans l'action show(), alors qu'il n'est pas utilisé ? 
+
 TeachersController : attention à l'indentation du code, la fonction add() devrait être au même niveau que la fonction list()
 
 Il est mieux de mettre les catégories que vont gérer les Controller au singulier, car ils peuvent en gérer plusieurs en effet mais aussi un seul (un get() par exemple). TeachersController serait donc TeacherController et StudentsController serait StudentController
@@ -15,8 +16,8 @@ Il est mieux de mettre les catégories que vont gérer les Controller au singuli
 Models : seules les propriétés de CoreModel sont typées, les autres Models n'ont aucune propriétés typées. Plus la définition de l'ensemble des propriétés d'une classe est complète, plus les erreurs de paramètres ou de gestion des valeurs seront réduites. Il est de même pour les valeurs des variables pour les fonctions set() et des valeurs de retour des fonctions get()
 
 Views : 
-- layout/header.tpl.php : attention à l'url d'accès au fichier style.css, il ne sera valable que si nous sommes sur la page d'accueil à cause du "./", l'idéal étant d'utiliser une variable qui sera globale (exemple fichier de configuration) et l'indiquer avant chaque ressources appelées. Cette valeur peux être également dynamique en fonction des valeurs du $_SERVER.
-  
+- main/home.tpl.php : attention à l'url d'accès au fichier style.css, il ne sera valable que si nous sommes sur la page d'accueil à cause du "./", l'idéal étant d'utiliser une variable qui sera globale (exemple fichier de configuration) et l'indiquer avant chaque ressources appelées. Cette valeur peux être également dynamique en fonction des valeurs du $_SERVER.
+     
 ## Fonctionnement Global 
   
 Il est dommage de ne pas avoir un Controller complet, pourquoi avoir créer Students et Teachers mais non finalisé ? Il est préférable de se focaliser sur un élément à la fois, plutôt que gérer plusieurs catégories en même temps. Ainsi il est plus aisé d'y travailler et d'avancer, la concentration restant sur le même élément.
