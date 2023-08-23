@@ -16,7 +16,7 @@ Il est mieux de mettre les catégories que vont gérer les Controller au singuli
 Models : seules les propriétés de CoreModel sont typées, les autres Models n'ont aucune propriétés typées. Plus la définition de l'ensemble des propriétés d'une classe est complète, plus les erreurs de paramètres ou de gestion des valeurs seront réduites. Il est de même pour les valeurs des variables pour les fonctions set() et des valeurs de retour des fonctions get()
 
 Views : 
-- main/home.tpl.php : attention à l'url d'accès au fichier style.css, il ne sera valable que si nous sommes sur la page d'accueil à cause du "./", l'idéal étant d'utiliser une variable qui sera globale (exemple fichier de configuration) et l'indiquer avant chaque ressources appelées. Cette valeur peux être également dynamique en fonction des valeurs du $_SERVER.
+- layout/header.tpl.php : attention à l'url d'accès au fichier style.css, il ne sera valable que si nous sommes sur la page d'accueil à cause du "./", l'idéal étant d'utiliser une variable qui sera globale (exemple fichier de configuration) et l'indiquer avant chaque ressources appelées. Cette valeur peux être également dynamique en fonction des valeurs du $_SERVER.
      
 ## Fonctionnement Global 
   
