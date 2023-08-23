@@ -28,6 +28,11 @@ Le fichier index.php du répertoire public/ pourrait être allégé pour ne gard
 ## Avis global
   
 C'est dommage de ne pas s'être focalisé que sur une seule catégorie Student ou Teacher et donc de pas en avoir une plus complète. Par exemple se focaliser sur Teacher permettait de définir la structure complète d'un Controller type qu'il aurait été aisé de dupliquer pour Student après en modifiant ce qui était nécessaire. Peux être réussir à se focaliser sur une partie à la fois, ou un autre blocage n'a pas permis de réaliser plus de développements ? 
+
+Tout ce qui est "configuration" de l'application (url globale, routes, ...), ne pas hésitez à le mettre dans un fichier de configuration à part : config.ini, fichier.php séparé, ... Ainsi les évolutions et changements seront grandement facilités par la suite. 
+
+Au niveau du fichier .gitignore, ne pas exclure le fichier config.ini de configuration d'accès à la base de données va créer des soucis de déploiement de l'application et de sécurité (Identifiants en clair inscrit en dur), il est possible de mettre un fichier config.ini.example ou config.ini.dist comme base et mettre dans le fichier config.ini les identifiants de la machine où fonctionne l'application et donc ne pas l'oublier dans le .gitignore. Ainsi pour chaque déploiement, il suffira de copier le fichier de configuration mis en example, et de ne modifier que les valeurs propre à l'environnement.
+
   
 
 
